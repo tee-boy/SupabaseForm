@@ -1,5 +1,4 @@
 // Initializing supabase connecting the api key ...
-import { createClient } from '@supabase/supabase-js'
 
 // my Anon key and Api key
 
