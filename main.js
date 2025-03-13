@@ -1,10 +1,12 @@
-// Initializing supabase connecting the api key ....
-
-const { createClient } = supabase;
+// Initializing supabase connecting the api key ...
+import { createClient } from '@supabase/supabase-js'
 
 // my Anon key and Api key
-const SUPABASE_URL = "https://bxpbqjqhcfpqgvbjrjgp.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4cGJxanFoY2ZwcWd2YmpyamdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE2NTYwMTQsImV4cCI6MjA1NzIzMjAxNH0.Yihh4xvIxY3lF6altKtlaokL1kj4j4qEFFzjxvzRn_g";
+
+
+const supabaseUrl = 'https://bxpbqjqhcfpqgvbjrjgp.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 const userForm = document.getElementById('user-form');
 
